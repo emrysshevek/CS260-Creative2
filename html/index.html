@@ -3,15 +3,38 @@
     <head>
         <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="../js/index.js"></script>
+        <link rel="stylesheet" href="../css/index.css" type="text/css" />
     </head>
     
     <body>
         <div id="intro">
             <h1 id="title">Are You Smarter Than Your Classmates?</h1>
-            <h3 id="info">Answer as many questions as possible and see how you compare to the rest of the class!</h3>
-            <p id="instructions">You have 60 seconds to answer as many questions as you can. Questions are worth varying amounts of points, so skip the ones that are too hard to maximize your score!</p>
+            <h3 id="info">Answer as many Jeopardy-style questions as possible and see how you compare to the rest of the class!</h3>
+            <p id="instructions">You have 60 seconds to answer as many questions as you can. Questions are worth varying amounts of points, so skip the ones that are too hard.</p>
             <button id="start">Let's Go!</button>
-            <h2>Current Champion: </h2>
+        </div>
+        
+        <div id="game" class="hidden">
+            <div id="questions">
+                <h1 id="myQuestion"></h1>
+                <h2 id="questionValue"></h2>
+                <h2 id="playerScore"></h2>
+                <form>
+                    <input id="input" type="text"  placeholder="Answer">
+                    <input id="submit" type="submit"></button>
+                    <button id="skip" type="button">skip</button>
+                    <input type="submit" id="continue" class="hidden" value="continue"></button>
+                </form>
+                <h2 id="response" class="hidden"></h2>
+                <div id="timer">
+                </div>
+            </div>
+        </div>
+        
+        <div id="endGame" class="hidden">
+            <h1 id="endMessage" class="hidden">GAME OVER</h1>
+            <h1 id="finalScore" class="hidden">Final Score:</h1>
+            <ul id="questions"></ul>
         </div>
     </body>
 </html>
