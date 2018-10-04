@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../js/trivia.js"></script>
+        <link rel="stylesheet" href="../css/trivia.css" type="text/css" />
+    </head>
+    
+    <body>
+        <div id="countdown">
+            <span><h1 id="three" class="hidden">3</h1>
+            <h1 id="two" class="hidden">2</h1>
+            <h1 id="one" class="hidden">1</h1>
+            <h1 id="go" class="hidden">GO!</h1></span>
+        </div>
+        
+        <div id="game" class="hidden">
+            <div>Points: <span>0</span></div>
+            <div id="question">Question <span>1</span></div>
+            <form>
+                <input type="text" name="answer" id="answer"/>
+                <input type="submit" value="Submit" id="submit"/>
+                <input type="button" value="Skip" name="skip" id="skip"/>
+            </form>
+            <div id="timer">
+                <span id="time">60.00</span>
+                <div id="progress"></div>
+                
+            </div>
+        </div>
+    </body>
+</html>
