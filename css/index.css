@@ -1,9 +1,10 @@
-html {
-    height: 100%;
+body {
+    margin: 0px;
+    font-family: "Arial", Times, serif;
+    background-image: linear-gradient(to bottom right, #2708A0, white, yellow);
 }
 
-body {
-    margin: 0;
+html {
     height: 100%;
 }
 
@@ -18,14 +19,13 @@ body {
 /*    font-size: x-large;*/
 /*}*/
 
-#game {
+/*#game {
     max-width: 750px;
     width: 75%;
     margin: auto;
     background-color: #fca6ad;
     height: 100%;
-    text-align: center;
-}
+}*/
 
 #timer {
     position: relative;
@@ -44,6 +44,87 @@ body {
 /*    top: 0;*/
 /*    z-index: 1;*/
 /*}*/
+
+button {
+    border-radius: 5px;
+    background-color: #2708A0; 
+    color: white; 
+    border: 2px solid #2708A0;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #76B041;
+    border: 2px solid #76B041;
+    color: black;
+}
+
+input {
+    border-radius: 5px;
+    background-color: #2708A0; 
+    border: 2px solid #2708A0;
+    color: white; 
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+input:hover {
+    background-color: #76B041;
+    border: 2px solid #76B041;
+    color: black;
+}
+
+h1 {
+    color: #2708A0;
+    text-align: center;
+}
+
+h2 {
+    color: #2708A0;
+}
+
+h3 {
+    color: #3A5683;
+}
+
+p {
+    color: #3A5683;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #639A88;
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+#header {
+    background-color: #3A5683;
+    border-radius: 0px;
+    margin: 0px;
+    width: 100%;
+    font-family: "Verdana", Times, serif;
+    font-size: 30px;
+    padding: 10px;
+    color: #E6E8E6;
+}
 
 #sep {
     width: 10px;
