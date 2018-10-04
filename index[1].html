@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        <style>
+            .hidden {
+            display: hidden;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="intro">
+            <h1 id="title">Are You Smarter Than Your Classmates?</h1>
+            <h3 id="info">Answer as many questions as possible and see how you compare to the rest of the class!</h3>
+            <p id="instructions">You have 60 seconds to answer as many questions as you can. Questions are worth varying amounts of points, so skip the ones that are too hard.</p>
+            <button id="start">Let's Go!</button>
+        </div>
+        <div id="questions" style="display:none">
+            <h1 id="myQuestion"></h1>
+            <h2 id="questionValue"></h2>
+            <h2 id="playerScore"></h2>
+            <input id="input" type="text"  value="Answer">
+            <button id="submit">submit</button>
+            <button id="skip">skip</button>
+            <button id="continue" style="display:none">continue</button>
+        </div>
+        <h2 id="response" style="display:none"></h2>
+    </body>
+</html>
