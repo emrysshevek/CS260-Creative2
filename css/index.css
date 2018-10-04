@@ -44,3 +44,33 @@ body {
 /*    top: 0;*/
 /*    z-index: 1;*/
 /*}*/
+
+#sep {
+    width: 10px;
+    height: 100%;
+    color: black;
+    /*padding-left: 5px;*/
+    /*padding-right: 5px;*/
+}
+
+#questionList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#questionList li {
+    border-style: solid;
+    border-width: 1px;
+}
+
+#questionList li * {
+    display: inline-block;
+}
+
+#number {
+    width: 10%;
+}
+
+#status {
+    width: 80%;
+}
