@@ -20,8 +20,8 @@ $(document).ready(function() {
             questions.push(data);
             questions[0].status = "skipped";
             startTimer();
-        })
-    })
+        });
+    });
     
     $("#submit").click(function(e){
         var userAnswer = $("#input").val();
@@ -43,7 +43,7 @@ $(document).ready(function() {
         $("#continue").show();
         
         e.preventDefault();
-    })
+    });
     
     $("#continue").click(function(e){
         $.getJSON("http://jservice.io/api/random", function(data) {
@@ -67,7 +67,7 @@ $(document).ready(function() {
         });
         
         e.preventDefault();
-    })
+    });
     
     $("#skip").click(function(e){
         $.getJSON("http://jservice.io/api/random", function(data) {
@@ -93,6 +93,28 @@ $(document).ready(function() {
         e.preventDefault();
     });
     
+    $("#restart").click(function(e) {
+        console.log("here");
+        questions = [];
+        playerScore = 0;
+        $("#endGame").hide();
+        $.getJSON("http://jservice.io/api/random", function(data) {
+            console.log(data);
+            question = data[0]['question'];
+            value = data[0]['value'];
+            answer = data[0]['answer'];
+            e.preventDefault();
+            $("#game").show();
+            $("#playerScore").text("Player score: " + playerScore);
+            $("#myQuestion").text(question);
+            $("#questionValue").text('Question value: ' + value)
+            questions.push(data);
+            questions[0].status = "skipped";
+            startTimer();
+        });
+        e.preventDefault();
+    });
+    
 });
 
 function startTimer(){
@@ -100,7 +122,7 @@ function startTimer(){
     var start = $.now();
     $("#timer").animate(
         {width: "0px"},
-        60000,
+        6000,
         "linear",
         function(){
             endGame();
@@ -115,16 +137,32 @@ function endGame(){
     $("#endMessage").fadeOut(300);
     console.log(questions);
     console.log(playerScore);
+    
     $("#finalScore").text("Final Score: " + playerScore);
     $("#finalScore").delay(300).show();
+    
     var sep = "<div id=\"sep\"></div>";
     var list = "";
     for (index in questions){
         var number = "<div id=\"number\">" + index + "</div>";
         var question = "<div id=\"questionText\">" + questions[index][0]["question"] + "</div";
+        var answer = "<div id=\"answerText\">" + questions[index][0]["answer"] + "</div";
         var status = "<div id=\"status\">" + questions[index].status + "</div>";
-        list += "<li id=\"questionSummary\">";
-        list += number + sep + question + sep + status;
+        
+        var color = "";
+        if (questions[index].status == "correct"){
+            color = "#08ff00";
+        }
+        else if (questions[index].status == "wrong"){
+            color = "#f26875";
+        }
+        else {
+            color = "#2495e5";
+        }
+        var background = "style=\"background: " + color + ";"
+
+        list += "<li id=\"questionSummary\"" + background + ">";
+        list += question + "<br>" + answer;
         list += "</li>";
         console.log(questions);
     }

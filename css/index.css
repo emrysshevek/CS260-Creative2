@@ -53,27 +53,7 @@ html {
     /*padding-right: 5px;*/
 }
 
-#questionList {
-    list-style-type: none;
-    padding-left: 0;
-}
 
-#questionList li {
-    border-style: solid;
-    border-width: 1px;
-}
-
-#questionList li * {
-    display: inline-block;
-}
-
-#number {
-    width: 10%;
-}
-
-#status {
-    width: 80%;
-}
 .header {
     background-color: #0F033B;
     border-radius: 0px;
@@ -175,4 +155,52 @@ div {
     font-family: "Arial", Times, serif;
     color: #fff;
     text-align: center;
+}
+
+#questionBox {
+    overflow-x: scroll;
+    max-height: 75%;
+}
+
+#questionList {
+    list-style-type: none;
+    padding-left: 0;
+    max-height: 75%
+}
+
+#questionList li {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#questionList li * {
+    display: inline-block;
+    background-color: inherit;
+    line-height: 10px;
+}
+
+#questionText {
+}
+
+#answerText {
+}
+
+#number {
+    width: 10%;
+}
+
+#status {
+    width: 80%;
+}
+
+#questionSummary {
+    text-align: center;
+}
+
+#restart {
+    display: inline-block;
+}
+
+#finalScore {
+    display: inline-block;
 }
