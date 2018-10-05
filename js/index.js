@@ -100,7 +100,7 @@ function startTimer(){
     var start = $.now();
     $("#timer").animate(
         {width: "0px"},
-        1000,
+        60000,
         "linear",
         function(){
             endGame();

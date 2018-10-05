@@ -7,10 +7,13 @@
     </head>
     
     <body>
+        <div class="header"><img src="logo.png" style="height:50px"></div>
         <div id="intro">
             <h1 id="title">Are You Smarter Than Your Classmates?</h1>
-            <h3 id="info">Answer as many Jeopardy-style questions as possible and see how you compare to the rest of the class!</h3>
-            <p id="instructions">You have 60 seconds to answer as many questions as you can. Questions are worth varying amounts of points, so skip the ones that are too hard.</p>
+            <h3 id="info">Answer as many Jeopardy-style questions as possible!</h3>
+            <p id="instructions">You have 60 seconds to answer as many questions as you can.
+            Questions are worth varying amounts of points, so skip the ones that 
+            are too hard. </p>
             <button id="start">Let's Go!</button>
         </div>
         
@@ -26,6 +29,7 @@
                     <input type="submit" id="continue" class="hidden" value="continue"></button>
                 </form>
                 <h2 id="response" class="hidden"></h2>
+                <p>Timer:</p>
                 <div id="timer">
                 </div>
             </div>
@@ -36,6 +40,10 @@
             <h1 id="finalScore" class="hidden">Final Score:</h1>
             <ul id="questionList">
             </ul>
+        </div>
+        
+        <div class="footer">
+            <p>Created by Mason Poggemann and Josh Hunt</p>
         </div>
     </body>
 </html>
